@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-fluid{
+  background-color: #127CEC;
+  padding: 50px;
+  width: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  padding: 15px;
+}
+.button{
+  width: 100%;
+  height: 40px;
+  background-color: #4BA2FF;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.button:hover{
+  background-color: #127CEC;
+}
+.card{
+  margin: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Animation */
+
+.card{
+  transform-origin: 50% 50%;
+  animation: jack-in-the-box-animation 1s ease 0s 1 normal both running;
+}
+
+@keyframes jack-in-the-box-animation {
+  0% {
+      transform: scale(0.1) rotate(30deg);
+      opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+      transform: scale(1) rotate(-10deg);
+      opacity: 1;
+  }
+
+  70% {
+      transform: scale(1) rotate(3deg);
+  }
+
+  100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+  }
+}
+
+.card:hover{
+  cursor: pointer;
+  transform-origin: 60% 50%;
+  animation: jello-animation 1.5s ease 0s 1 normal both running;
+}
+
+@keyframes jello-animation {
+
+  0%,
+  100%,
+  11.1% {
+      transform: none;
+  }
+
+  22.2% {
+      transform: skew(-12.5deg, -12.5deg);
+  }
+
+  33.3% {
+      transform: skew(6.25deg, 6.25deg);
+  }
+
+  44.4% {
+      transform: skew(-3.125deg, -3.125deg);
+  }
+
+  55.5% {
+      transform: skew(1.5625deg, 1.5625deg);
+  }
+
+  66.6% {
+      transform: skew(-0.78125deg, -0.78125deg);
+  }
+
+  77.7% {
+      transform: skew(0.390625deg, 0.390625deg);
+  }
+
+  88.8% {
+      transform: skew(-0.1953125deg, -0.1953125deg);
   }
 }
